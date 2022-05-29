@@ -3,9 +3,10 @@
  * @Date: 2022/5/28 14:33
  * @Description: 添加
  */
-import React from 'react';
-import { Button } from 'antd';
-import FormRender, { useForm } from 'form-render';
+import React, {useEffect} from 'react';
+import {Button} from 'antd';
+import FormRender, {useForm} from 'form-render';
+import { useSearchParams } from "react-router-dom";
 
 const schema = {
     type: 'object',
@@ -24,8 +25,14 @@ const schema = {
     }
 };
 
-const Add = () => {
+const Add:React.FC = (props) => {
     const form = useForm();
+    const [searchParams, setSearchParams] = useSearchParams();
+    useEffect(() => {
+        // 获取路由的参数
+        console.log(searchParams.get('id'));
+    }, []);
+
     const onFinish = (formData: any, errors: any) => {
         console.log('formData:', formData, 'errors', errors);
     };

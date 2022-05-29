@@ -1,13 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import ReactDOM from 'react-dom'
+import {BrowserRouter} from 'react-router-dom'
 import './assets/style/main.less'
 import AppRouter from './router/index'
+import {AppState} from "./state";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-      <BrowserRouter>
-          <AppRouter />
-      </BrowserRouter>
-  </React.StrictMode>
+ReactDOM.render(
+    <React.StrictMode>
+        <AppState>
+            <BrowserRouter>
+                <AppRouter />
+            </BrowserRouter>
+        </AppState>
+    </React.StrictMode>,
+    document.getElementById('root')
 )

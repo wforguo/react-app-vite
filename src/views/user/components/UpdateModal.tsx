@@ -7,6 +7,10 @@
 import FormRender, {useForm} from "form-render";
 import {Button} from "antd";
 import React from "react";
+import style from './UpdateModal.module.less';
+interface Props {
+    title: string,
+}
 
 const schema = {
     type: 'object',
@@ -25,13 +29,15 @@ const schema = {
     }
 };
 
-export default (props: any) => {
+// React.FC 代表React Function Component的接口
+const UpdateModal: React.FC<Props> = ({title}) => {
     const form = useForm();
     const onFinish = (formData: any, errors: any) => {
         console.log('formData:', formData, 'errors', errors);
     };
     return (
-        <div>
+        <div className={style.updateModal}>
+            <h2>{ title }</h2>
             <FormRender form={form} schema={schema} onFinish={onFinish} />
             <Button type="primary" onClick={form.submit}>
                 提交
@@ -39,3 +45,4 @@ export default (props: any) => {
         </div>
     );
 };
+export default UpdateModal;
