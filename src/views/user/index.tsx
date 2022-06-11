@@ -3,21 +3,13 @@
  * @Date: 2022/5/28 14:34
  * @Description: 列表
  */
-import {Button, Card, Space, Table, Tag } from 'antd';
+import {Button, Space, Table, Tag } from 'antd';
 import UpdateModal from "./components/UpdateModal";
-import React, {useContext} from "react";
-import { AppContext, AppSetStateContext } from "@/state";
-import {useUpdateUsrInfo} from "@/hooks/useUpdateUserInfo";
+import React from "react";
 import {useNavigate} from "react-router-dom";
 
 const UserList: React.FC = () => {
-    const value = useContext(AppContext);
-    const updateUseInfo = useUpdateUsrInfo();
     const navigate = useNavigate();
-    const handleUpdateUserInfo = () => {
-        console.log(value);
-        updateUseInfo();
-    }
     const handleAdd = () => {
         navigate('/add');
     }
@@ -115,15 +107,6 @@ const UserList: React.FC = () => {
             >
                 添加用户
             </Button>
-            <Card>
-                <div onClick={() => {
-                    handleUpdateUserInfo();
-                }}>
-                    {
-                        JSON.stringify(value)
-                    }
-                </div>
-            </Card>
             <UpdateModal title='用户信息编辑' />
             <Table columns={columns} dataSource={data} />
             <Table columns={columns} dataSource={data} />

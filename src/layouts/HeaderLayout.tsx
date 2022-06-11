@@ -6,10 +6,14 @@
 import React, {useState} from "react";
 import {Avatar, Col, Layout, Row} from "antd";
 import {MenuFoldOutlined, MenuUnfoldOutlined} from "@ant-design/icons";
+import logo from '@/assets/imgs/logo.png';
+import { useRecoilState } from "recoil";
+import {globalAtom} from "@/state";
 const { Header } = Layout;
 
 const HeaderLayout: React.FC = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useRecoilState(globalAtom.collapsed);
+    console.log(collapsed);
     return (
         <Layout>
             <Header className="site-layout-header">
@@ -23,19 +27,10 @@ const HeaderLayout: React.FC = () => {
                         {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                             className: 'site-layout-collapsed-trigger',
                             onClick: () => setCollapsed(!collapsed),
+                            title: collapsed ? '展开' : '隐藏'
                         })}
-                        <span className="logo"
-                              style={{
-                                  margin: '24px',
-                                  width: 24,
-                                  height: 24,
-                                  minHeight: 24,
-                                  background: '#001529',
-                              }}
-                        />
-                        <span>
-                                React管理系统
-                            </span>
+                        <img src={logo} title='logo' alt='vite-logo' className="site-layout-logo" />
+                        <span>React管理系统</span>
                     </Col>
                     <Col span={12} style={{
                         display: 'flex',

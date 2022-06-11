@@ -7,16 +7,17 @@ import React from "react";
 import {Layout, Menu} from "antd";
 import {MenuFoldOutlined, UserOutlined} from "@ant-design/icons";
 import {To, useNavigate} from "react-router-dom";
+import {useRecoilState} from "recoil";
+import {globalAtom} from "@/state";
 const {Sider} = Layout;
 
 const SlideLayout: React.FC = (props) => {
-    const {
-        collapsed
-    } = props;
+    const [collapsed] = useRecoilState(globalAtom.collapsed);
     const navigate = useNavigate();
     const handleMenuNav = (item: { key: To; }) => {
         navigate(item.key);
     }
+    console.log(collapsed);
     return (
         <Sider theme={"light"} trigger={null} collapsible collapsed={collapsed} className='site-layout-slide'>
             <Menu

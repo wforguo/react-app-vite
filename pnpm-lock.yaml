@@ -11,16 +11,19 @@ specifiers:
   antd: ^4.20.6
   axios: ^0.27.2
   cz-conventional-changelog: ^3.3.0
+  dayjs: ^1.11.3
   eslint: ^8.17.0
   eslint-plugin-standard: ^5.0.0
   form-render: ^1.10.0
+  js-cookie: ^3.0.1
   less: ^4.1.2
   less-loader: ^11.0.0
+  lodash: ^4.17.21
   normalize.css: ^8.0.1
   react: ^17.0.2
   react-dom: ^17.0.2
   react-router-dom: ^6.0.0
-  recoil: ^0.5.2
+  recoil: ^0.7.3
   rimraf: ^3.0.2
   typescript: ^4.6.3
   vite: ^2.9.9
@@ -34,14 +37,17 @@ dependencies:
   ahooks: registry.npmmirror.com/ahooks/3.4.0_react@17.0.2
   antd: registry.npmmirror.com/antd/4.20.6_sfoxds7t5ydpegc3knd667wn6m
   axios: registry.npmmirror.com/axios/0.27.2
+  dayjs: registry.npmmirror.com/dayjs/1.11.3
   form-render: registry.npmmirror.com/form-render/1.10.0_mo2r362nrzcuvcnr4byuqq7r5m
+  js-cookie: registry.npmmirror.com/js-cookie/3.0.1
   less: registry.npmmirror.com/less/4.1.2
   less-loader: registry.npmmirror.com/less-loader/11.0.0_less@4.1.2
+  lodash: registry.npmmirror.com/lodash/4.17.21
   normalize.css: registry.npmmirror.com/normalize.css/8.0.1
   react: registry.npmmirror.com/react/17.0.2
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
   react-router-dom: registry.npmmirror.com/react-router-dom/6.3.0_sfoxds7t5ydpegc3knd667wn6m
-  recoil: registry.npmmirror.com/recoil/0.5.2_sfoxds7t5ydpegc3knd667wn6m
+  recoil: registry.npmmirror.com/recoil/0.7.3
 
 devDependencies:
   '@types/react': registry.npmmirror.com/@types/react/18.0.9
@@ -976,7 +982,7 @@ packages:
     dependencies:
       '@types/js-cookie': registry.npmmirror.com/@types/js-cookie/2.2.7
       ahooks-v3-count: registry.npmmirror.com/ahooks-v3-count/1.0.0
-      dayjs: registry.npmmirror.com/dayjs/1.11.2
+      dayjs: registry.npmmirror.com/dayjs/1.11.3
       intersection-observer: registry.npmmirror.com/intersection-observer/0.12.0
       js-cookie: registry.npmmirror.com/js-cookie/2.2.1
       lodash: registry.npmmirror.com/lodash/4.17.21
@@ -1614,10 +1620,10 @@ packages:
     engines: {node: '>=0.11'}
     dev: false
 
-  registry.npmmirror.com/dayjs/1.11.2:
-    resolution: {integrity: sha512-F4LXf1OeU9hrSYRPTTj/6FbO4HTjPKXvEIC1P2kcnFurViINCVk3ZV0xAS3XVx9MkMsXbbqlK6hjseaYbgKEHw==, registry: https://packages.aliyun.com/5fbf0736feb86b450c199a0f/npm/npm-registry/, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.2.tgz}
+  registry.npmmirror.com/dayjs/1.11.3:
+    resolution: {integrity: sha512-xxwlswWOlGhzgQ4TKzASQkUhqERI3egRNqgV4ScR8wlANA/A9tZ7miXa44vTTKEq5l7vWoL5G57bG3zA+Kow0A==, registry: https://packages.aliyun.com/5fbf0736feb86b450c199a0f/npm/npm-registry/, tarball: https://registry.npmmirror.com/dayjs/-/dayjs-1.11.3.tgz}
     name: dayjs
-    version: 1.11.2
+    version: 1.11.3
     dev: false
 
   registry.npmmirror.com/debug/3.2.7:
@@ -2753,6 +2759,13 @@ packages:
     version: 2.2.1
     dev: false
 
+  registry.npmmirror.com/js-cookie/3.0.1:
+    resolution: {integrity: sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw==, registry: https://packages.aliyun.com/5fbf0736feb86b450c199a0f/npm/npm-registry/, tarball: https://registry.npmmirror.com/js-cookie/-/js-cookie-3.0.1.tgz}
+    name: js-cookie
+    version: 3.0.1
+    engines: {node: '>=12'}
+    dev: false
+
   registry.npmmirror.com/js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==, registry: https://packages.aliyun.com/5fbf0736feb86b450c199a0f/npm/npm-registry/, tarball: https://registry.npmmirror.com/js-tokens/-/js-tokens-4.0.0.tgz}
     name: js-tokens
@@ -3788,7 +3801,7 @@ packages:
       '@babel/runtime': registry.npmmirror.com/@babel/runtime/7.18.3
       classnames: registry.npmmirror.com/classnames/2.3.1
       date-fns: registry.npmmirror.com/date-fns/2.28.0
-      dayjs: registry.npmmirror.com/dayjs/1.11.2
+      dayjs: registry.npmmirror.com/dayjs/1.11.3
       moment: registry.npmmirror.com/moment/2.29.3
       rc-trigger: registry.npmmirror.com/rc-trigger/5.2.19_sfoxds7t5ydpegc3knd667wn6m
       rc-util: registry.npmmirror.com/rc-util/5.21.5_sfoxds7t5ydpegc3knd667wn6m
@@ -4213,24 +4226,12 @@ packages:
       object-assign: registry.npmmirror.com/object-assign/4.1.1
     dev: false
 
-  registry.npmmirror.com/recoil/0.5.2_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-Edibzpu3dbUMLy6QRg73WL8dvMl9Xqhp+kU+f2sJtXxsaXvAlxU/GcnDE8HXPkprXrhHF2e6SZozptNvjNF5fw==, registry: https://packages.aliyun.com/5fbf0736feb86b450c199a0f/npm/npm-registry/, tarball: https://registry.npmmirror.com/recoil/-/recoil-0.5.2.tgz}
-    id: registry.npmmirror.com/recoil/0.5.2
+  registry.npmmirror.com/recoil/0.7.3:
+    resolution: {integrity: sha512-WaPppk3Hz5/V9nOVmu1X/o3cJyf/rLXw/YsEENvMzEDk+LKqMiGfFgZ3Gg51TKWccpCZCyrSBXn2O4L1E2WDPQ==, registry: https://packages.aliyun.com/5fbf0736feb86b450c199a0f/npm/npm-registry/, tarball: https://registry.npmmirror.com/recoil/-/recoil-0.7.3.tgz}
     name: recoil
-    version: 0.5.2
-    peerDependencies:
-      react: '>=16.13.1'
-      react-dom: '*'
-      react-native: '*'
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
-      react-native:
-        optional: true
+    version: 0.7.3
     dependencies:
       hamt_plus: registry.npmmirror.com/hamt_plus/1.0.2
-      react: registry.npmmirror.com/react/17.0.2
-      react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
     dev: false
 
   registry.npmmirror.com/regenerator-runtime/0.11.1:

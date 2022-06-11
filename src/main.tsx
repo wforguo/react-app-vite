@@ -1,19 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
-import AppRouter from './router/index'
-import {AppState} from "./state";
-import './style/app.less';
+import App from '@/App'
+import '@/style/app.less';
+import {
+    RecoilRoot,
+} from 'recoil';
 
 console.log('import.meta.env', import.meta.env);
 
-ReactDOM.render(
-    <React.StrictMode>
-        <AppState>
-            <BrowserRouter>
-                <AppRouter />
-            </BrowserRouter>
-        </AppState>
-    </React.StrictMode>,
-    document.getElementById('root')
-)
+function render () {
+    ReactDOM.render(
+        <RecoilRoot>
+            <React.StrictMode>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </React.StrictMode>
+        </RecoilRoot>,
+        document.getElementById('root')
+    )
+}
+
+render();
