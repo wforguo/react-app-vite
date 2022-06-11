@@ -6,8 +6,8 @@
 import {Button, Card, Space, Table, Tag } from 'antd';
 import UpdateModal from "./components/UpdateModal";
 import React, {useContext} from "react";
-import { AppContext, AppSetStateContext } from "../../state";
-import {useUpdateUsrInfo} from "../../hooks/useUpdateUserInfo";
+import { AppContext, AppSetStateContext } from "@/state";
+import {useUpdateUsrInfo} from "@/hooks/useUpdateUserInfo";
 import {useNavigate} from "react-router-dom";
 
 const UserList: React.FC = () => {
@@ -125,6 +125,13 @@ const UserList: React.FC = () => {
                 </div>
             </Card>
             <UpdateModal title='用户信息编辑' />
+            <Table columns={columns} dataSource={data} />
+            <Table columns={columns} dataSource={data} />
+            <Table columns={columns} dataSource={data} />
+            <Table columns={columns} dataSource={data} />
+            <Table columns={columns} dataSource={data} />
+            <Table columns={columns} dataSource={data} />
+            <Table columns={columns} dataSource={data} />
             <Table columns={columns} dataSource={data} />
         </>
     )

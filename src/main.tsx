@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
-import './assets/style/main.less'
 import AppRouter from './router/index'
 import {AppState} from "./state";
+import './style/app.less';
+
+console.log('import.meta.env', import.meta.env);
 
 ReactDOM.render(
     <React.StrictMode>

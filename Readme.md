@@ -39,3 +39,39 @@ useEffect(() => {
   document.title = `点击了${count}次`
 }, [count]);
 ```
+
+### 路由的钩子函数
+
+useHistory/useNavigate
+useLocation
+useSearchParams
+useRouteMatch
+
+## 路由
+
+跨组件传递路由信息
+
+### HOC高阶组件
+
+withRouter
+
+### hooks实现
+
+### 私有路由
+
+
+## 函数式编程
+
+### 复合函数
+
+中间件
+
+![img.png](img.png)
+
+### 柯里化
+
+函数的积累
+
+
+## Docker部署
+

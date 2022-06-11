@@ -1,0 +1,49 @@
+/**
+ * @Author: forguo
+ * @Date: 2022/6/11 14:20
+ * @Description: 全局布局
+ */
+.site-layout {
+    overflow: hidden;
+    &-header {
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        background: #fff;
+    }
+    &-collapsed-trigger {
+        padding: 24px 24px 24px 8px;
+        font-size: 18px;
+        line-height: 64px;
+        cursor: pointer;
+        transition: color .3s;
+        display: flex;
+        align-items: center;
+    }
+    &-container {
+        width: 100%;
+        overflow: hidden;
+        height: calc(100vh - 64px);
+    }
+    &-slide {
+        overflow: hidden;
+        height: 100%;
+        overflow-y: auto;
+    }
+    &-menu {
+        overflow: hidden;
+    }
+    &-content {
+        padding: 0 24px 24px;
+        overflow-y: auto;
+    }
+    &-page {
+        background: #fff;
+        padding: 24px;
+        overflow-y: auto;
+    }
+    &-footer {
+        padding: 24px 24px 0;
+        text-align: center;
+    }
+}

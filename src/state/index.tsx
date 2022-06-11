@@ -19,6 +19,7 @@ const userInfo = {
     address: 'China',
     count: 0,
 }
+
 export const AppContext = React.createContext(userInfo);
 export const AppSetStateContext = React.createContext< React.Dispatch<React.SetStateAction<AppStateValue>> | undefined>(undefined);
 export const AppState: React.FC<Props> = (props) => {
